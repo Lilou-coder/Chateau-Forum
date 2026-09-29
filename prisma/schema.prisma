@@ -13,7 +13,7 @@ model Member {
   name String
   role String
   bio String @default("")
-  order Int @default(0)
+  photo String?
 }
 model Event {
   id Int @id @default(autoincrement())

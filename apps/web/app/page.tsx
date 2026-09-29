@@ -1,30 +1,59 @@
 import Image from "next/image";
 import Link from "next/link";
+import josephine from "../../../media/membres/josephine_carre.jpeg";
+import hippolyte from "../../../media/membres/hippolyte_carre.jpeg";
+import eliane from "../../../media/membres/eliane_carre.jpeg";
+import jules from "../../../media/membres/jules_carre.jpeg";
+import victor from "../../../media/membres/victor_carre.jpeg";
 
-const api =
-  process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
 
 type Membre = {
   id: number;
   name: string;
   role: string;
   bio: string;
-  photo?: string;
+  photo: typeof josephine;
 };
 
-export default async function Home() {
-  let membres: Membre[] = [];
+const membres: Membre[] = [
+  {
+    id: 1,
+    name: "Joséphine",
+    role: "Présidente",
+    bio: "Bretonne revendiquée et amatrice de beurre salé, Joséphine est à la tête de Château Forum et compte bien faire vivre le campus tout au long de l’année.",
+    photo: josephine,
+  },
+  {
+    id: 2,
+    name: "Hippolyte",
+    role: "Vice-président",
+    bio: "Originaire de Cailloux-sur-Fontaines et récemment arrivé à Palaiseau, Hippolyte accompagne la présidente dans l’organisation et les projets de Château Forum.",
+    photo: hippolyte,
+  },
+  {
+    id: 3,
+    name: "Eliane",
+    role: "Secrétaire générale",
+    bio: "Parisienne assumée et toujours prête à écouter les autres, Eliane veille à l’organisation du bureau et au bon suivi des projets.",
+    photo: eliane,
+  },
+  {
+    id: 4,
+    name: "Jules",
+    role: "Trésorier",
+    bio: "Toulousain, amateur de chiffres et de bonnes adresses, Jules veille sur les finances de Château Forum.",
+    photo: jules,
+  },
+  {
+    id: 5,
+    name: "Victor",
+    role: "Vice-trésorier",
+    bio: "Marseillais devenu presque parisien après deux années de prépa, Victor épaule Jules dans la gestion de la trésorerie.",
+    photo: victor,
+  },
+];
 
-  try {
-    const reponse = await fetch(`${api}/api/members`, {
-      cache: "no-store",
-    });
-
-    if (reponse.ok) {
-      membres = await reponse.json();
-    }
-  } catch {}
-
+export default function Home() {
   return (
     <>
       {/* INTRODUCTION */}

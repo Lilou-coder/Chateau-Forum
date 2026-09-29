@@ -68,12 +68,11 @@ export default function Home() {
           </h1>
 
           <p className="accueil-description">
-            Des moments pour se retrouver, des idées à construire ensemble
-            et une vie de campus ouverte à toutes et à tous.
+            Un château, des idées, et surtout du monde autour de la table. On vous prépare des événements pour se retrouver et faire vivre le campus ensemble.
           </p>
 
           <Link className="bouton bouton-clair" href="/evenements">
-            Découvrir nos événements
+            Voir les prochains événements
             <span aria-hidden="true"> →</span>
           </Link>
         </div>
@@ -86,15 +85,14 @@ export default function Home() {
       {/* LE BUREAU */}
       <section className="section bureau" aria-labelledby="bureau-titre">
         <div className="titre-section">
-          <p className="sur-titre sombre">Qui se cache derrière le château ?</p>
+          <p className="sur-titre sombre">LES VISAGES DU CHÂTEAU</p>
 
           <h2 id="bureau-titre">
-            Découvrez le <em>bureau</em>
+            Faites connaissance avec le <em>bureau</em>
           </h2>
 
           <p className="introduction-section">
-            Cinq étudiants, cinq rôles et une même envie :
-            faire vivre Château Forum tout au long de l’année.
+            Derrière Château Forum, il y a Joséphine, Hippolyte, Eliane, Jules et Victor. Découvrez celles et ceux qui imaginent les événements et font avancer la liste.
           </p>
         </div>
 

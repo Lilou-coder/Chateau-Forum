@@ -26,7 +26,7 @@ function requireUser(req: Request, res: Response, next: NextFunction) {
   next();
 }
 function requireAdmin(req: Request, res: Response, next: NextFunction) {
-  if (res.locals.user.role !== 'ADMIN') { res.status(403).json({ error: 'Accès réservé à l'administration.' }); return; }
+  if (res.locals.user.role !== 'ADMIN') { res.status(403).json({ error: "Accès réservé à l'administration." }); return; }
   next();
 }
 const memberInput = z.object({ name: z.string().trim().min(1).max(80), role: z.string().trim().min(1).max(80), bio: z.string().max(600).default(''), order: z.number().int().default(0) });
